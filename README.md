@@ -1,2 +1,2 @@
 # Git-Python
- Estudo da linguagem Python
+ Repositório criado para aprendisagem e estudo da linguagem Python
