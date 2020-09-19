@@ -1,3 +1,3 @@
 # Git-Python
- Repositório criado para aprendiseagem e estudo da linguagem Python
+ Repositório criado para aprendizagem e estudo da linguagem Python
  
