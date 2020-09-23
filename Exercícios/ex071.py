@@ -9,12 +9,13 @@
 # considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1. #
 # *************************************************************** #
 
-# Inicializando variáveis:*******************************
+# Inicializando variáveis:*************************************** #
 título, banco = ' Simulador de Caixa Eletrônico ', 'BANCO POPPEPE'
 l1, l2 = '@' * 36, '~' * 36
 cedula = 50
-# quant = 0
-# ********************************************************
+# quant = 0  # esta variável esta sendo inicializada dentro do while
+
+# Inicializando variáveis:*************************************** #
 print(f'\n\033[1;34m{título:$^60}\033[m\n')
 print(f'{l1}\n{banco:^36}\n{l1}\n')
 num = int(input('Qual valor você quer sacar? R$'))
