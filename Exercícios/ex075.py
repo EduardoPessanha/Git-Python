@@ -21,6 +21,8 @@ for cont in range(0, 4):
     cont += 1
 t = (t1, t2, t3, t4)
 print('*'*60)
+print(f'Você digitou os valores: {t}')
+print('*'*60)
 n1 = t.count(9)
 if n1 == 0:
     n1 = ' Não foi digitado o valor 9'
@@ -28,11 +30,18 @@ else:
     n1 = f' O valor 9 foi digitado {t.count(9)} vez(ez)'
 n2 = t.count(3)
 if n2 != 0:
-    n2 = f'O primeiro valor 3 foi digitado na posição {t.index(3)+1}'
+    n2 = f'O primeiro valor 3 foi digitado na {t.index(3)+1}ª posição'
 else:
     n2 = 'Não foi digitado o valor 3'
-cont = 0
+print(' Os números pares digitados foram: ', end='')
 for n in range(0, len(t)):
     if t[n] % 2 == 0:
-        cont += 1
-print(f'{n1}\n {n2}\n Foram digitados {cont} número(s) pares\n')
+        print(t[n], end=' ')
+print(f'\n{n1}\n {n2}\n')
+
+                        # Solução do Gustavo Guanabara:
+print('\n')
+num = (int(input('Digite um número: ')), int(input('Digite outro número: ')),
+       int(input('Digite mais um número: ')), int(input('Digite o último número: ')))
+print('-='*30)
+print(f'Você digitou os valores: {num}')
