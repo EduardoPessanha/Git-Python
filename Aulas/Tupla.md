@@ -69,3 +69,13 @@ suco
 pizza
 pudim
 >>>
+
+max() e min() são métodos aplicáveis nas Tuplas:
+
+Exemplo:
+
+>>> números =(0, 9, 8, 1, 8)
+>>> max(números)
+9
+>>> min(números)
+0 
