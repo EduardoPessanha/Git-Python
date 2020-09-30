@@ -6,7 +6,7 @@
 # ***************************************************************** #
 titulo = ' \033[1;36mContando vogais em Tupla\033[m '
 linha = '*-' * 25
-print(f'\n{titulo:+^60}')
+print(f"\n{titulo:+^60}")
 palavra = ('carro', 'aviao', 'churrasco', 'teclado', 'computador',
            'aprender', 'programar', 'linguagem', 'Python', 'curso',
            'gratis', 'estudar', 'praticar', 'trabalhar', 'mercado', 'futuro')
