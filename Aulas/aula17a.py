@@ -94,3 +94,4 @@ b = a[:] # Nesse caso, estamos copiando para lista b os valores da lista a.
 b[2]= 7
 print(f'Lista a: {a}')
 print(f'Lista b: {b}, na lista b, fizemos b[2] = 7')
+print(b.count(7))

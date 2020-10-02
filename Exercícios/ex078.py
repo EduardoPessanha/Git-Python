@@ -12,20 +12,22 @@ valores = []
 for valor in range(0, 5):
     valores.append(int(input('Digite um número inteiro: ')))
 print(f'\n{linha}')
-print('\nOs números digitados foram: ', end='')
+print('Os números digitados foram: ', end='')
 for n in range(0, len(valores)):
     if n < len(valores)-1:
         print(f'{valores[n]}', end=' ')
     else:
         print(f'{valores[n]}\n')
 maior = max(valores)
+posM = valores.index(maior) + 1
 menor = min(valores)
-posM = valores.index(maior)+1
 posm = valores.index(menor)+1
-print(f"O maior valor digitado foi {maior}, na posição {posM}!")
-print(f'O menor valor digitado foi {menor}, na posição {posm}!\n')
-
-# ************************************************************ #
-
-# for pos, c in enumerate(valores):
-#     print(f'Na posição {pos+1} encontrei {c}')
+print(f"O maior valor digitado foi {maior}, nas posições ", end='')
+for pos, c in enumerate(valores):
+    if c == maior:
+        print(f'{pos + 1}', end=' ')
+print(f'\nO menor valor digitado foi {menor}, nas posições ', end='')
+for pos, c in enumerate(valores):
+    if c == menor:
+        print(f'{pos + 1}', end=' ')
+print(f'\n{linha}\n')
