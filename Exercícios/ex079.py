@@ -20,6 +20,7 @@ while True:
             f'O número {num} já foi adicionado! Não será adicionado novamente.')
     else:
         listaValores.append(num)
+        print('valor adiconado com sucesso!')
     while continua not in 'SN':
         continua = str(input('Deseja continuar [S/N]? ')).upper().strip()[0]
         if continua not in 'SN':
