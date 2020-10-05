@@ -77,4 +77,4 @@ for cont in range(0, 5):
             indice = lista.index(valor)
             print(f'Adicionado na posição {indice}')
 print(f'\n{linha}')
-print(lista)
+print(f'Os números digitados foram {lista}')
