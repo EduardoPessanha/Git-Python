@@ -4,3 +4,8 @@
 # use parênteses. Seu aplicativo deverá analisar se a expressão       #
 # passada está com os parênteses abertos e fechados na ordem correta. #
 # ******************************************************************* #
+linha = '++'*25
+titulo = ' \033[1;7;31mValidando expressões matemáticas\033[m '
+print(f'\n{titulo:*^60}\n')
+print(linha)
+# ***************************************************************** #

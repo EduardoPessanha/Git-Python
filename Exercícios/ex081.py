@@ -6,7 +6,7 @@
 # B) A lista de valores, ordenada de forma decrescente.             #
 # C) Se o valor 5 foi digitado e está ou não na lista.              #
 # ***************************************************************** #
-linha = '=+'*25
+linha = '=+' * 25
 titulo = ' \033[1;35mExtraindo dados de uma Lista\033[m '
 print(f'\n{titulo:*^60}\n')
 print(linha)
@@ -22,18 +22,19 @@ while True:
     if continua in 'nN':
         break
     else:
-        continua=' '
+        continua = ' '
 cont = listaNum.count(5)
+listaNum.sort(reverse=True)
+quant = len(listaNum)
 print(f'\n{linha}')
-print('O número 5 foi digitado', end =' ')
+print(f'Os números digitados foram:{listaNum}')
+print(f'Foram digitados {quant} números')
+print('O número 5 foi digitado', end=' ')
 if cont == 0:
     print(f'{cont} vez(es)!!', end='')
 else:
-    listaNum.sort(reverse=True)
-    print(f'{cont} vez(es) e ficaram na posição', end=' ')
+    print(f'{cont} vez(es) na posição:', end=' ')
     for pos, num in enumerate(listaNum):
         if num == 5:
             print(f'{pos + 1}', end=' ')
-quant = len(listaNum)
-print(f'\nForam digiados {quant} números')
-print(listaNum)
+print(f'\n{linha}\n')
