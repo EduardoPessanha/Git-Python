@@ -8,4 +8,11 @@ linha = '++'*25
 titulo = ' \033[1;7;31mValidando expressões matemáticas\033[m '
 print(f'\n{titulo:*^60}\n')
 print(linha)
-# ***************************************************************** #
+# ******************************************************************* #
+expressão = str(input('Disgite uma expressão com parenteses: '))
+abre = expressão.count('(')
+fecha = expressão.count(')')
+if abre != fecha:
+    print('Expressão INVÁLIDA!')
+else:
+    print('Expressão OK!')
