@@ -16,7 +16,7 @@ for cont in range(0, 5):
     if cont == 0:
         lista.insert(0, valor)
         print(f'O valor {valor}, foi adiconado no final da lista!')
-    elif cont == 1:                     
+    elif cont == 1:
         if valor > lista[0]:
             lista.insert(1, valor)
             indice = lista.index(valor)
@@ -27,7 +27,7 @@ for cont in range(0, 5):
             print(f'Adicionado na posição {indice}')
     elif cont == 2:
         if valor > lista[1]:
-            lista.insert(2,valor)
+            lista.insert(2, valor)
             indice = lista.index(valor)
             print(f'O valor {valor}, foi adiconado no final da lista!')
         elif valor < lista[0]:
@@ -35,7 +35,7 @@ for cont in range(0, 5):
             indice = lista.index(valor)
             print(f'Adicionado na posição {indice}')
         else:
-            lista.insert(1,valor)
+            lista.insert(1, valor)
             indice = lista.index(valor)
             print(f'Adicionado na posição {indice}')
     elif cont == 3:
@@ -52,7 +52,7 @@ for cont in range(0, 5):
             indice = lista.index(valor)
             print(f'Adicionado na posição {indice}')
         else:
-            lista.insert(1,valor)
+            lista.insert(1, valor)
             indice = lista.index(valor)
             print(f'Adicionado na posição {indice}')
     elif cont == 4:
@@ -73,7 +73,7 @@ for cont in range(0, 5):
             indice = lista.index(valor)
             print(f'Adicionado na posição {indice}')
         else:
-            lista.insert(1,valor)
+            lista.insert(1, valor)
             indice = lista.index(valor)
             print(f'Adicionado na posição {indice}')
 print(f'\n{linha}')
