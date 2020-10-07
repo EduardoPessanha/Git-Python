@@ -27,14 +27,27 @@ cont = listaNum.count(5)
 listaNum.sort(reverse=True)
 quant = len(listaNum)
 print(f'\n{linha}')
-print(f'Os números digitados foram:{listaNum}')
+print(f'Os números digitados em ordem decrescente foram:{listaNum}')
 print(f'Foram digitados {quant} números')
-print('O número 5 foi digitado', end=' ')
+print('O número 5', end=' ')
 if cont == 0:
-    print(f'{cont} vez(es)!!', end='')
+    print(f'não foi digitado! Não faz parte da lista!')
 else:
-    print(f'{cont} vez(es) na posição:', end=' ')
+    print(f'foi digitado {cont} vez(es) na posição:', end=' ')
     for pos, num in enumerate(listaNum):
         if num == 5:
             print(f'{pos + 1}', end=' ')
 print(f'\n{linha}\n')
+
+# ***************************************************************** #
+#                 Solução do Gustavo Guanabara                      #
+# ***************************************************************** #
+# Na solução apresentada pelo professor, para saber se o número 5
+# faz parte ou não da lista, foi usando um if con o operador "in":
+#
+# if 5 in listaNum:      # se o valor 5 ESTÁ EM (in) listaNum
+#     print('O valor 5 faz parte da lista!')
+# else:                  # se não:
+#     print('O valor 5 não foi encontrado na lista!')
+#
+# O operador "in", no Python, faz buscas em coleções, listas. etc.

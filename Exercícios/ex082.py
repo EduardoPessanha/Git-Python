@@ -35,3 +35,14 @@ print(f'O números digitados foram: {listaFonte}')
 print(f'Os números pares digitados foram: {listaPar}')
 print(f'Os números ímpares digitados foram: {listaÍmpar}')
 print(f'{linha}\n')
+
+# ***************************************************************** #
+#                 Solução do Gustavo Guanabara                      #
+# ***************************************************************** #
+# Para criar a lista de pares e ímpares foi usado o enumerate():
+#
+# for i, v in enumerate(listaFonte):
+#     if v % 2 == 0:
+#         listaPar.append(v)
+#     else:
+#         listaÍmpar.append(v)
