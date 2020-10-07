@@ -10,10 +10,8 @@ print(f'\n{titulo:#^70}\n')
 print(f'{linha}\n')
 # ***************************************************************** #
 valores = []
-cont = 1
 for valor in range(0, 5):
-    valores.append(int(input(f'Digite o {cont}º valor: ')))
-    cont += 1
+    valores.append(int(input(f'Digite o {valor + 1}º valor: ')))
 print(f'\n{linha}')
 print('Os números digitados foram: ', end='')
 for n in range(0, len(valores)):
