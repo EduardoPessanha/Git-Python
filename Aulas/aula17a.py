@@ -1,4 +1,7 @@
-#            VARIÁVEIS CPOMPOSTAS - LISTAS (Parte 1)
+# ***************************************************** #
+#                  Python 3 - Aula 017                  #
+#        VARIÁVEIS COMPOSTAS - LISTAS (Parte 1)         #
+# ***************************************************** #
 
 # Sintaxe das Listas -> as Listas são declaradas atravez de colchetes [] (ou usando a função "list")
 # A diferença básica entre as Listas e as Tuplas é que as Listas PODEM SER ALTERADAS"
@@ -84,9 +87,9 @@ print(f'Lista a: {a}')
 b = a
 print('\nIgualando listas( b = a):')
 print(f'Lista b: {b}\n')
-b[2] = 8 # A partir do momento que igualamos listas, é criado uma 
-         # ligação entre elas, assim, ao se alterar uma lista a outra 
-         # também será alterada da mesma forma.   
+b[2] = 8 # A partir do momento que igualamos listas, é criado uma
+         # ligação entre elas, assim, ao se alterar uma lista a outra
+         # também será alterada da mesma forma.
 print(f'Lista a: {a}')
 print(f'Lista b: {b}, na lista b fizemos b[2] = 8')
 print('\nCopiando listas (b = a[:]):')
