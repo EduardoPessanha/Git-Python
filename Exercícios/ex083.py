@@ -10,27 +10,29 @@ print(f'\n{título:*^60}\n')
 print(linha)
 # ******************************************************************* #
 expressão = str(input('Digite uma expressão: '))
-# pilha = list()
-abre = expressão.count('(')
-fecha = expressão.count(')')
-if abre != fecha:
-    print('Expressão INVÁLIDA!')
-else:
-    print('Expressão OK!')
-# for carc in expressão:
-#     if carc == '(':
-#         pilha.append(carc)
-#     elif carc == ')':
-#         if len(pilha) > 0:
-#             pilha.pop()
-#         else:
-#             pilha.append(carc)
-#             break
-# if len(pilha) == 0:
-#     print('Sua expressão está correta')
+pilha = list()
+# *******************************************************************
+# O código a seguir NÃO está correto!!!!
+# abre = expressão.count('(')
+# fecha = expressão.count(')')
+# if abre != fecha:
+#     print('Expressão INVÁLIDA!')
 # else:
-#     print('Sua expressão está errada!')
-
+#     print('Expressão OK!')
+# *******************************************************************
+for carc in expressão:
+    if carc == '(':
+        pilha.append(carc)
+    elif carc == ')':
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(carc)
+            break
+if len(pilha) == 0:
+    print('Sua expressão está correta')
+else:
+    print('Sua expressão está errada!')
 
 # ***************************************************************** #
 #                 Solução do Gustavo Guanabara                      #
