@@ -32,3 +32,21 @@ while True:
 print(linha)
 listaValores.sort()
 print(f'Os valores digitados foram: {listaValores}')
+
+# ***************************************************************** #
+#                 Solução do Gustavo Guanabara                      #
+# ***************************************************************** #
+# números = list()
+# while True:
+#     n = int(input('Digite um valor: '))
+#     if n not in números:
+#         números.append(n)
+#         print('Valor adiconado com sucesso ...')
+#     else:
+#         print('Valor duplicado! Não vou adicionar ,,,')
+#     r = str(input('Deseja continuar? [S/N] '))
+#     if r in "Nn":
+#         break
+# print('-='*30)
+# números.sort()
+# print(f'Você digitou os valores: {números}')
