@@ -10,7 +10,7 @@ lanche = ['hamburger', 'suco', 'pizza', 'pudim']
 print(f'lanche = {lanche}')
 print('Tipo "lanche" -> ', type(lanche))
 
-# Podemos substituir, eliminar (del(), pop(), remove()) e adicionar (append(), insert()),
+# Podemos substituir, eliminar (del(), pop(), remove()) e adicionar (append(), insert())
 
 print('\nSubstituindo pudim por picolé:\n')
 lanche[3] = 'picolé'
@@ -26,25 +26,25 @@ print('\nAdicionando cachorro-quente antes de hamburger ao lanche:\n')
 lanche.insert(0, 'cachorro-quente')
 print(f'lanche = {lanche}')
 
-print('\nApagando "pizza" de lanche com o metodo del:\n')
+print('\nApagando "pizza" de lanche com o método del:\n')
 # O método del apaga o elemento da lista conforme o indice definido
 del lanche[3]
 print(f'lanche = {lanche}')
 
-print('\nApagando "pizza" de lanche com o metodo pop():\n')
+print('\nApagando "pizza" de lanche com o método pop():\n')
 lanche.insert(3, 'pizza')
-# O método pop('indice') aapaga o elemento da lista conforme o indice definido
+# O método pop('indice') apaga o elemento da lista conforme o indice definido
 lanche.pop(3)
 print(f'lanche = {lanche}')
 
-print('\nApagando último elemento de lanche com o metodo pop():\n')
+print('\nApagando último elemento de lanche com o método pop():\n')
 lanche.insert(3, 'pizza')
-lanche.pop()  # O método pop() aapaga o último elemento da lista
+lanche.pop()  # O método pop() apaga o último elemento da lista
 print(f'lanche = {lanche}')
 
-print('\nApagando "pizza" de lanche com o metodo remove("pizza"):\n')
+print('\nApagando "pizza" de lanche com o método remove("pizza"):\n')
 lanche.append('picolé')
-# O método remove('elemento') aapaga a primeira ocorrência do 'elemento' que encontrar na lista
+# O método remove('elemento') apaga a primeira ocorrência do 'elemento' que encontrar na lista
 lanche.remove('pizza')
 print(f'lanche = {lanche}')
 
@@ -69,7 +69,7 @@ if 8 in num:
 else:
     print(f'Não existe o número 8 na lista {num}\n')
 
-# valor = []  # ou valor = list() -> lidta vazia
+# valor = []  # ou valor = list() -> lista vazia
 # valor = list()
 # # valor.append(5)
 # # valor.append(9)
@@ -87,14 +87,13 @@ print(f'Lista a: {a}')
 b = a
 print('\nIgualando listas( b = a):')
 print(f'Lista b: {b}\n')
-b[2] = 8 # A partir do momento que igualamos listas, é criado uma
-         # ligação entre elas, assim, ao se alterar uma lista a outra
-         # também será alterada da mesma forma.
+b[2] = 8  # A partir do momento que igualamos listas, é criado uma
+          # ligação entre elas, assim, ao se alterar uma lista a outra
+          # também será alterada da mesma forma.
 print(f'Lista a: {a}')
 print(f'Lista b: {b}, na lista b fizemos b[2] = 8')
 print('\nCopiando listas (b = a[:]):')
-b = a[:] # Nesse caso, estamos copiando para lista b os valores da lista a.
-b[2]= 7
+b = a[:]  # Nesse caso, estamos copiando para lista b os valores da lista a.
+b[2] = 7
 print(f'Lista a: {a}')
 print(f'Lista b: {b}, na lista b, fizemos b[2] = 7')
-print(b.count(7))
