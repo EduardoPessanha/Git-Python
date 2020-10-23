@@ -1,13 +1,18 @@
-print('\nLei de Ohm -> V = I x R\n')
+azul = '\033[1;7;34m'
+neutro = '\033[m'
+titulo = " Lei de Ohm em Corrente Contínua "
+print(f"\n{azul}{titulo:^42}{neutro}\n")
 fim = ' '
 linha = '-=' * 21
 while fim not in 'N':
-    print('''Qual a unidade você quer calcular:
-
-        V = Tensão
-        I = Corrente
-        R = Resistência
-        ''')
+    print('''******************************************
+*   Qual a unidade você quer calcular:   *
+*                                        *
+*            V = Tensão                  *
+*            I = Corrente                *
+*            R = Resistência             *
+*                                        *
+******************************************''')
     while True:
         opcao = str(input('Escolha a sua opção (V/I/R): ')).upper().strip()[0]
         if opcao not in 'VIR':
