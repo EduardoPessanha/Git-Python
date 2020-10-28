@@ -51,3 +51,4 @@ while fim not in 'N':
         break
     else:
         print(f'{linha}\n')
+
