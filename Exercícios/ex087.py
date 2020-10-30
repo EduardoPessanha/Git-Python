@@ -21,9 +21,8 @@ lin2 = list()
 for lin in range(0, 3):
     for col in range(0, 3):
         matriz[lin][col] = int(input(f'Digite um valor para a posição [{lin},{col}]: '))
-        n = matriz[lin][col]
-        if n % 2 == 0:
-            spar += n
+        if matriz[lin][col] % 2 == 0:
+            spar += matriz[lin][col]
         if col == 2:
             col3 += matriz[lin][col]
         if lin == 1:
