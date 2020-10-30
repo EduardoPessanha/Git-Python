@@ -36,3 +36,26 @@ print(linha1)
 print(f'A soma de todos os valores pares digitados é igual a {spar}.')
 print(f'A soma dos valores da terceira coluna é igual a {col3}.')
 print(f'O maior valor da segunda linha é igual a {max(lin2)}.')
+print(linha1)
+# ******************************************************************************************************************* #
+# Outras alternativas:
+# Para calcular a soma dos valores na linha 2 da matriz:
+n = 0
+for col in range(0, 3):
+    n += matriz[1][col]
+print(n)
+
+# Para calcular a soma dos valores na coluna 3 da matriz:
+n = 0
+for lin in range(0, 3):
+    n += matriz[lin][2]
+print(n)
+
+# Para achar o maior valor na linha 2 da matriz:
+n = 0
+for col in range(0, 3):
+    if col == 0:
+        n = matriz[1][col]
+    elif n < matriz[1][col]:
+        n = matriz[1][col]
+print(n)
