@@ -19,7 +19,7 @@ t = (randint(0, 10), randint(0, 10), randint(
 #     if n < menor:
 #         menor = t[cont]
 # print(f'Os números sorteados foram: {t[0]},{t[1]},{t[2]},{t[3]}')
-print('Os números sorteados foram: ',end='')
+print('Os números sorteados foram: ', end='')
 for n in t:
     print(f'{n}',end=' ')
 # print(f'\nO maior valor foi {maior}')

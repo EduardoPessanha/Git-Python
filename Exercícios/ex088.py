@@ -6,24 +6,35 @@
 # composta.                                                            #
 # ******************************************************************** #
 from random import randint
+from time import sleep
+
 linha = '++' * 25
 linha1 = '\033[1;34m*=\033[m' * 25
-título = ' \033[1;35mPalpites para a Mega Sena\033[m '
-print(f'\n{título:*^60}\n')
+título = ' Palpites para a Mega Sena '
+print(linha)
+print(f'\033[1;34m{título.upper():*^50}\033[m')
 print(linha)
 # ******************************************************************* #
 palpite = list()
 mega = [[], [], [], [], [], []]
-quant = 10
+n = 0
+quant = int(input('Quantos jogos você quer sortear? '))
 for jogo in range(0, quant):
     for lin in range(0, 6):
-        # for col in range(0, 6):
-        mega[lin] = randint(1, 60)
+        if lin == 0:
+            n = randint(1, 60)
+        else:
+            while True:
+                n = randint(1, 60)
+                if mega.count(n) != 0:  # número repetido !!!
+                    n = 0
+                else:
+                    break
+        mega[lin] = n
     mega.sort()
     palpite.append(mega[:])
-print(linha1)
+print('\033[1;34m*=' * 7, f' SORTEANDO {quant} JOGOS ', '*=' * 7, '\033[m')
 for lin in range(0, quant):
     print(f'Jogo {lin + 1}: {palpite[lin]}')
-print(linha1)
-
-# video: 32:56
+    sleep(1)
+print('\033[1;34m*=' * 9, ' BOA SORTE!!! ', '*=' * 9, '\033[m')
