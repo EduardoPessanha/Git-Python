@@ -32,9 +32,15 @@ while resp not in 'Nn':
         else:
             break
 print(linha1)
-print('Nº   Nome       Média')
-for id, el in enumerate(boletim):
-    print(f'{id:<4} {el[0]:<10} {el[2]:.2f}')
-
-
-# 'Mostrar as notas de qual aluno (999 interrompe)? '
+print(f'{"Nº":<4}{"Nome":<20}{"Média"}')
+print('='*30)
+boletim.sort()
+for ind, el in enumerate(boletim):
+    print(f'{ind + 1:<4}{el[0]:<20}{el[2]:>5.2f}')
+print(linha1)
+while True:
+    nAluno = int(input('Mostrar as notas de qual aluno (999 interrompe)? '))
+    if nAluno == 999:
+        break
+    print(f'As notas de {boletim[nAluno - 1][0]} são: {boletim[nAluno - 1][1]}')
+    print(linha1)
