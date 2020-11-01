@@ -12,20 +12,29 @@ print(f'\n{título:*^60}\n')
 print(linha)
 # ******************************************************************* #
 boletim = list()
-dados = list()
+nome = list()
+nota = list()
 resp = ' '
 while resp not in 'Nn':
-    dados.insert(0, str(input('Nome do aluno: ')))
-    dados.insert(1, float(input('Primeira nota: ')))
-    dados.insert(2, float(input('Segunda nota: ')))
-    dados.insert(3, (dados[1] + dados[2]) / 2)
-    boletim.append(dados[:])
-    dados.clear()
+    nome.append(str(input('Nome do aluno: ')))
+    for n in range(1, 3):
+        nota.append(float(input(f'Nota {n}: ')))
+    media = ((nota[0] + nota[1]) / 2)
+    nome.insert(1, nota[:])
+    nome.insert(2, media)
+    boletim.append(nome[:])
+    nome.clear()
+    nota.clear()
     while True:
         resp = str(input('Novo cadastro (S/N)? ')).upper().strip()[0]
         if resp not in 'SsNn':
             print('Entrada INVÁLIDA!.', end=' ')
         else:
             break
-for i in boletim:
-    print(f'{i}')
+print(linha1)
+print('Nº   Nome       Média')
+for id, el in enumerate(boletim):
+    print(f'{id:<4} {el[0]:<10} {el[2]:.2f}')
+
+
+# 'Mostrar as notas de qual aluno (999 interrompe)? '
