@@ -13,7 +13,7 @@ for l in range(0, lin):
     linha = []
     for c in range(0, col):
         # Cria as colunas da matriz e recebe o valor
-        linha.append(int(input('Digite o valor para [' + str(l) +'][' + str(c) +']: ')))
+        linha.append(int(input(f'Digite o valor para a posição [{l}][{c}]: ')))
     matriz.append(linha)
 for l, v in enumerate(matriz):
     print()
