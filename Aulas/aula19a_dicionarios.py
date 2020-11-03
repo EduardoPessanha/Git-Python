@@ -60,3 +60,59 @@ print('guido' in tel) => \033[m''', end='')
 print('guido' in tel)
 print('''\033[1;34mprint('jack' not in tel) => \033[m''', end='')
 print('jack' not in tel)
+
+# Outros exemplos:
+
+# Declarando dicionários:
+
+dados = {}  # Dicionário declarado com uma estrutura vazia
+print('\ndados = {}\ntype(dados) => ', end='')
+print(type(dados))
+print('print(dados) => ', end='')
+print(dados)
+dados = {'nome': 'Pedro', 'idade': 25}
+print(f"dados = {{'nome': 'Pedro', 'idade': 25}}\nprint(dados) => ", end='')
+print(dados)
+print("dados = dict([('nome', 'Pedro'), ('idade', 25), ('sexo', 'masculino'),"
+      " ('peso', 78)])\nprint(dados) => ", end='')
+dados = dict([('nome', 'Pedro'), ('idade', 25), ('sexo', 'masculino'), ('peso', 78)])
+print(dados)
+
+# Exibindo dicionários e seus elementos:
+
+print(f"O {dados['nome']} tem {dados['idade']} anos"
+      f" de idade, é do sexo {dados['sexo']} e pesa {dados['peso']:.2f} Kg.")
+# Nos dicionários o append() não funciona.
+print(f'''filme = {{'titulo': 'star Wars',"
+        'ano': 1977,"
+        'diretor': 'George Lucas'
+        }}\nprint(filme.values()) => ''', end='')
+filme = {'titulo': 'Star Wars',
+         'ano': 1977,
+         'diretor': 'George Lucas'
+         }
+print(filme.values())
+print('print(filme.keys() => ', end='')
+print(filme.keys())
+print('print(filme.items()) => ', end='')
+print(filme.items())
+
+print('''\nfor k,v in filme.items():
+    print(f'O {} é {}')''')
+for k, v in filme.items():
+    print(f'O {k} é {v}')
+print('''
+locadora = [{'titulo': 'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'},
+            {'titulo': 'Avengers', 'ano': 2012, 'diretor': 'Joss Whedom'},
+            {'titulo': 'Matrix', 'ano': 1999, 'diretor': 'Wachowski'}
+            ]
+print(locadora[0]['ano']) => ''', end='')
+locadora = [{'titulo': 'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'},
+            {'titulo': 'Avengers', 'ano': 2012, 'diretor': 'Joss Whedom'},
+            {'titulo': 'Matrix', 'ano': 1999, 'diretor': 'Wachowski'}
+            ]
+
+print(locadora[0]['ano'])
+print("print(locadora[2]['titulo']) => ", end='')
+print(locadora[2]['titulo'])
+
