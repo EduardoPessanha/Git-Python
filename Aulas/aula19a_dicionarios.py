@@ -116,3 +116,78 @@ print(locadora[0]['ano'])
 print("print(locadora[2]['titulo']) => ", end='')
 print(locadora[2]['titulo'])
 
+# video: 16:29
+pessoas = {'nome': 'Gustavo', 'sexo': 'M', 'idade': 25}
+print(pessoas)
+print(pessoas['nome'])
+# Na hora de se referenciar os elementos do dicionário  usa-se colchetes:
+print(f'O {pessoas["nome"]} tem {pessoas["idade"]} anos')
+print(pessoas.keys())
+print(pessoas.values())
+print(pessoas.items())
+for k in pessoas.keys():
+    print(k)
+for v in pessoas.values():
+    print(v)
+#  Nos dicionários não usamos o enumerate(), nos usamos o items():
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+print()
+del pessoas['sexo']
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+print()
+pessoas['nome'] = 'Leandro'
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+print()
+pessoas['peso'] = 98.5
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+
+# Criando um dicionário dentro de uma lista:
+print()
+
+estado1 = {'uf': 'Rio de janeiro', 'sigla': 'RJ'}
+estado2 = {'uf': 'São Paulo', 'sigla': 'SP'}
+Brasil = list()
+Brasil.append(estado1)
+Brasil.append(estado2)
+print(estado1)
+print()
+print(estado2)
+print()
+print(Brasil)
+print()
+print(Brasil[0])
+print()
+print(Brasil[0]['uf'])
+
+# estado = dict()
+# Brasil = list()
+# print()
+
+# for c in range(3):
+#     estado['uf'] = str(input('Unidade Federativa: '))
+#     estado['sigla'] = str(input('Sigla do Estado: '))
+#     Brasil.append(estado)   # Não vai funcionar corretamente!!!!
+# print(Brasil)
+# print()
+
+estado = dict()
+Brasil = list()
+for c in range(3):
+    estado['uf'] = str(input('Unidade Federativa: '))
+    estado['sigla'] = str(input('Sigla do Estado: '))
+    Brasil.append(estado.copy())  # No caso dos diconarios deve-se usar o comando copy()!
+print(Brasil)
+
+for e in Brasil:  # Para cada estado em Brasil que é uma lista
+    # print(e)        # mostra o estado que é um dicionário
+    for k, v in e.items():  # chave (k) e valor (v) em objeto gerado pelo for anterior -> 'e', que é um dicionário
+        print(f'O campo {k} vale {v}')
+
+for e in Brasil:  # Esse laço se refere a lista
+    for v in e.values():  # Esse laço se refere ao dicionário
+        print(v, end=' ')
+    print()
