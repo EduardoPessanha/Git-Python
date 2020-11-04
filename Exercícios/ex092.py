@@ -24,12 +24,7 @@ if cad['CTPS'] != 0:
     cad['salário'] = float(input('Salário: R$ '))
     # Para o exercício consideraremos a aposentadoria após 35 anos de trabalho
     cad['aposentadoria'] = cad['contratação'] + 35 - datetime.now().year + cad['idade']
-    print(linha1)
-    for k, v in cad.items():
-        print(f'{"- ":>6}{k.capitalize()} tem o valor {v}')
-    print(linha1)
-else:
-    print(linha1)
-    for k, v in cad.items():
-        print(f'{"- ":>6} {k.capitalize()} tem o valor {v}')
-    print(linha1)
+print(linha1)
+for k, v in cad.items():
+    print(f'{"- ":>6} {k.capitalize()} tem o valor {v}')
+print(linha1)
