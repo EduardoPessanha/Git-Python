@@ -52,6 +52,7 @@ print(linha1)
 #         'jogador3': randint(1, 6),
 #         'jogador4': randint(1, 6)
 #         }
+# Exibindo o dicionário jogo:
 # print('Valores sorteados:')
 # for k, v in jogo.items():
 #     print(f'O {k} tirou {v} no dado.')
