@@ -2,7 +2,8 @@ from tkinter import *
 
 janela = Tk()
 
-label_1 = Label(janela, text='Teste de Interface Gráfica', font='Arial:20')
+texto = "Olá Mundo!, cheguei!"
+label_1 = Label(janela, text=texto, font='Arial:20')
 
 
 label_1.place(x=200, y=200)
