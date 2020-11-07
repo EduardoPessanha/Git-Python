@@ -1,3 +1,0 @@
-
-            print(lista)
-        else:

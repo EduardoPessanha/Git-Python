@@ -10,9 +10,9 @@ título = ' \033[1;3;4;7;34mAprimorando os Dicionários\033[m '
 print(f'\n{título:*^64}\n')
 print(linha)
 # ****************************************************************** #
-cad = dict()
-n_gols = list()
-jogos = list()
+cad = dict()    # dicionário com os dados dos jogadores
+n_gols = list() # lista dos gols
+jogos = list()  # listas das partidas
 # Cadastrando os jogadores:
 while True:
     cad.clear()
@@ -44,7 +44,7 @@ while True:
     cod = int(input('Mostrar dados de qual jogador? (999 para sair) '))
     if cod == 999:
         break
-    elif cod <= partidas:
+    if cod <= len(jogos): # cod é o codigo do jogador!!!!
         # O indice da lista jogos corresponde a um dicionário que contém os dados dos jogadores:
         i = cod - 1
         print(f"-- LEVANTAMENTO DO JOGADOR {jogos[i]['nome']} --")
@@ -77,3 +77,4 @@ logo o nome do jogador x  será o valor do campo 'nome' de jogos[x]
 #  ___________   ___________________   __________
 # {'nome': 'T', 'gols': [2, 1, 2, 3], 'total': 8}
 '''
+print()
