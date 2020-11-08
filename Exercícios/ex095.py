@@ -69,6 +69,8 @@ while True:
             # dentro de 'jogador'
             print(f"{'* ':>7}Na partida {i + 1} {' => '} {it} gols.")
         print(f"{' ':>5}Total de gols marcados => {sum(lista[cod - 1]['gol'])}")
+        média = sum(lista[cod - 1]['gol']) / (len(lista[cod-1]['gol']))
+        print(f"{' ':>5}Média de gols por partida => {média:.2f}")
 print(lin1)
 print(f'{"<< PROGRAMA ENCERRADO >>":^52}')
 saída = '\033[1;3;7;34m< << VOLTE SEMPRE >> >\033[m'
