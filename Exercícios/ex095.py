@@ -10,7 +10,7 @@ título = ' \033[1;3;4;7;34mAprimorando os Dicionários\033[m '
 print(f'\n{título:*^64}\n')
 print(lin)
 # ****************************************************************** #
-jogador = dict()  # Guarda os dados do jogador
+jogador = dict()    # Guarda os dados do jogador
 partida = list()    # Guarda os dados das partidas dos jogadores => gols
 lista = list()      # Guarda os dados de todos os jogadores cadastrados
 
@@ -39,12 +39,18 @@ while True:
 # Exibindo os dados dos jogadores:
 
 print(lin1)
-print(f"{'COD':^6}{'NOME':<14}{'GOLS':<14}{'TOTAL'}")
+# print(f"{'COD':^6}{'NOME':<15}{'GOLS':<15}{'TOTAL'}")    # minha solução
+
+# Solução do Gustavo Guanabara:
+print(f'{"COD":^6}', end='')
+for k in jogador.keys():                # para cada chave em chave de jogador
+    print(f"{k.upper():<15}", end='')   # exibe o nome da chave
+print()
 print(lin1)
 for i, it in enumerate(lista):      # para cada indice e item na lista 'lista'
     print(f'{i + 1:^6}', end='')    # exibe o indice da lista
     for k, v in it.items():         # para cada chave e valor nos itens (jogador) da lista
-        print(f"{str(v):<14}", end='')   # exibe o valor da chave
+        print(f"{str(v):<15}", end='')   # exibe o valor da chave
     print()
 
 # Exibindo o ranking de um jogador:
@@ -58,11 +64,12 @@ while True:
         print(f'ERRO! Não existe jogador com código {cod}')
     else:
         print(lin1)
-        print(f"< << LEVANTAMENTO DO JOGADOR {lista[cod - 1]['nome']} >> >")
-        for i, it in enumerate(lista[cod-1]['gol']):    # para cada indice e item na lista 'gol', dentro de 'jogador'
-            print(f"{'* ':>4}Na partida {i + 1} {' => '} {it} gols.")
-        print(f"{' ':>4}Total de gols marcados => {sum(lista[cod - 1]['gol'])}")
+        print(f">> > LEVANTAMENTO DO JOGADOR {lista[cod - 1]['nome'].upper()}:")
+        for i, it in enumerate(lista[cod-1]['gol']):    # para cada indice e item na lista no campo 'gol',
+            # dentro de 'jogador'
+            print(f"{'* ':>7}Na partida {i + 1} {' => '} {it} gols.")
+        print(f"{' ':>5}Total de gols marcados => {sum(lista[cod - 1]['gol'])}")
 print(lin1)
 print(f'{"<< PROGRAMA ENCERRADO >>":^52}')
-saída = '\033[1;3;7;34mVOLTE SEMPRE\033[m'
-print(f"{saída:^64}")
+saída = '\033[1;3;7;34m< << VOLTE SEMPRE >> >\033[m'
+print(f"{saída:^66}")
