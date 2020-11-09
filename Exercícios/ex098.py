@@ -10,6 +10,9 @@
 # ****************************************************************** #
 #
 # Definindo as funções:
+from time import sleep
+
+
 def lin():
     print('+=' * 24)
 
@@ -32,25 +35,33 @@ titulo('Função de Contador')
 # ****************************************************************** #
 # def exibe(início, fim, passo):
 #     print(f'Contagem de {início} até {fim} de {passo} em {passo}:')
+def linha():
+    print('-=' * 23)
 
 
 def contador(ini, fim, p):
+    from time import sleep
     if p < 0:
         p = -p
     if p == 0:
         p = 1
+    linha()
     print(f'Contagem de {ini} até {fim} de {p} em {p}:')
     if ini < fim:
-        for c in range(ini, fim + 1, p):
-            print(c, end=' ')
+        fim = fim + 1
     else:
-        for c in range(ini, fim - 1, -p):
-            print(c, end=' ')
-    print('FIM!.')
+        fim = fim - 1
+        p = -p
+    for c in range(ini, fim, p):
+        print(c, end=' ', flush=True)  # Se não usar flush=True, o programa cria um buffer de tela,
+        # e somente após o término da contagem que ele mostra na tela.
+        sleep(.25)
+    print('FIM!')
 
 
 contador(1, 10, 1)
 contador(10, 0, 2)
+linha()
 print('Agora é a sua vez de personalizar a contagem!')
 i = int(input('Início: '))
 f = int(input('Fim: '))
