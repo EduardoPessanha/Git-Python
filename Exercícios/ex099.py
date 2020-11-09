@@ -23,4 +23,32 @@ def titulo(msg):
 
 
 titulo('Função que descobre o maior')
+
+
 # ****************************************************************** #
+def maior(*valor):
+    from time import sleep
+    n = 0
+    lin1()
+    # Analisando qual o maior valor passado
+    for c in valor:     # para cada item em valor:
+        if c == 0:
+            n = c
+        elif c >= n:
+            n = c
+    # Exibindo o resultado da função:
+    print('Analisando os valores passados ...')
+    for v in valor:
+        print(f'{v}', end=' ', flush=True)
+        sleep(.5)
+    print(f'Foram informados {len(valor)} valores ao todo.')
+    print(f'O maior valor informado foi {n}.')
+
+
+# Rotina principal
+maior(5, 7, 9, 4, 2, 1)
+maior(23, 567, 8, 1234, 20)
+maior(-5, -6, 0, -12)
+maior(1, 2, 4, 7, 9, 3)
+maior(1)
+maior()
