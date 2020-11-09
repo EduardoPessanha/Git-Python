@@ -20,8 +20,22 @@ def titulo(msg):
     print(f'\n{texto:*^64}\n')
     lin()
     print()
-# ****************************************************************** #
 
+
+def escreve(texto):
+    c = int(len(texto)) + 4
+    print('~' * c)
+    print(f'{texto:^{c}}')
+    print('~' * c)
+
+
+# ****************************************************************** #
 
 # Rotina principal
 titulo('Um print especial')
+
+escreve('CURSO EM VIDEO')
+escreve('Teste')
+escreve("Olá, Mundo")
+escreve('Oi')
+escreve('INCONSTITUCIONALISTICAMENTE')
