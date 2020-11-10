@@ -7,6 +7,9 @@
 # anterior.                                                           #
 # ******************************************************************* #
 #
+from time import sleep
+
+
 # Definindo as funções:
 def lin():
     print('+=' * 24)
@@ -25,29 +28,31 @@ def titulo(msg):
 
 
 titulo('Funções para sortear e somar')
+
+
 # ****************************************************************** #
-def sorteia():
+
+
+def sorteia(lista):     # Sorteia 5 valores aleatórios e coloca em uma lista
     from random import randint
-    sorteado = list()
     for n in range(5):
-        sorteado.append(randint(0, 10))
-    print('Sorteando 5 valores da lista: ', end='')
-    for v in sorteado:
-        print(v, end=' ')
+        números.append(randint(0, 10))
+    print('Sorteando 5 valores da lista: ', end='', flush=True)
+    sleep(.6)
+    for valor in números:
+        print(valor, end=' ', flush=True)
+        sleep(.35)
     print('PRONTO!')
-    somapar(sorteado)
 
 
-def somapar(*v):
-    sp = 0
-    for i in v:
-        for n in i:
-            if n % 2 == 0:      # número par
-                sp += n
-    print(sp)
+def somapar(v):
+    spar = 0
+    for n in v:
+        if n % 2 == 0:  # número par
+            spar += n
+    print(f'Somando os valores pares de {v} temos: {spar}')
 
 
-
-sorteia() 
-
-
+números = list()
+sorteia(números)
+somapar(números)
