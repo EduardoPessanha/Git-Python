@@ -26,3 +26,28 @@ def titulo(msg):
 
 titulo('Funções para sortear e somar')
 # ****************************************************************** #
+def sorteia():
+    from random import randint
+    sorteado = list()
+    for n in range(5):
+        sorteado.append(randint(0, 10))
+    print('Sorteando 5 valores da lista: ', end='')
+    for v in sorteado:
+        print(v, end=' ')
+    print('PRONTO!')
+    somapar(sorteado)
+
+
+def somapar(*v):
+    sp = 0
+    for i in v:
+        for n in i:
+            if n % 2 == 0:      # número par
+                sp += n
+    print(sp)
+
+
+
+sorteia() 
+
+
