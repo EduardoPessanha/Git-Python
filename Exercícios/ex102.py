@@ -36,6 +36,8 @@ def fatorial(n, show=False):
 
 
 # Rotina Principal
+help(fatorial)
+print('~'*44)
 n = int(input('Escolha um número para calcular o fatorial: '))
 while True:
     s = str(input('Mostrar o cálculo (S/N)? ')).upper().strip()[0]
@@ -47,6 +49,6 @@ if s == "S":
     s = True
 else:
     s = False
-# help(fatorial)
 print(f'O valor de {n} fatorial é igual a: {n}! = ', end='')
 print(f'{fatorial(n, s)}')
+
