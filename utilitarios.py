@@ -50,7 +50,8 @@ def titulo(msg):
 
 def leiaint(texto):
     """
-    -> Le uma string da entrada e faz a validação para dados numéricos
+    -> Lê uma string de entrada e faz a validação
+    para aceitar apenas um valor numérico.
     :param texto: String a ser validada
     :return: n
     """
