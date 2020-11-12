@@ -40,7 +40,7 @@ help(fatorial)
 print('~'*44)
 n = int(input('Escolha um número para calcular o fatorial: '))
 while True:
-    s = str(input('Mostrar o cálculo (S/N)? ')).upper().strip()[0]
+    s = str(input('Mostrar o cálculo (S/N)? ')).upper().strip()[0].split()
     if s not in 'SN':
         print('Entrada INVÁLIDA! ', end='')
     else:

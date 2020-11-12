@@ -9,3 +9,28 @@ from utilitarios import *
 #
 titulo(' Ficha do Jogador ')
 # ******************************************************************* #
+# Definindo a função:
+
+
+def ficha(nome='', gol=0):
+    """
+    -> Mostra os dados do jogador
+    :param nome: (opcional) Nome do jogador
+    :param gol: (opcional) Gols marcados pelo jogador no campeonato
+    :return: Dados do jogador
+    """
+    if nome in '':
+        nome = '<desconhecido>'
+    return print(f'O jogador {nome} fez {gol} gol(s) no campeonato.')
+
+
+# Rotina principal:
+n = str(input("Nome do jogador: ")).title()
+g = str(input('Número de gols: '))
+if g.isnumeric():
+    g = int(g)
+else:
+    g = 0
+if n.isnumeric():
+    n = ''
+ficha(n, gol=g)
