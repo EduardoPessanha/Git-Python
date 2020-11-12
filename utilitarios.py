@@ -61,5 +61,5 @@ def leiaint(texto):
             n = int(n)
             break
         else:
-            print(f'{cor("vm")}ERRO: Digite um número inteiro válido.{cor(0)}')
+            print(f'\033[1;31mERRO: Digite um número inteiro válido.\033[m')
     return n
