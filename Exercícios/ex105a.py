@@ -18,7 +18,7 @@ from utilitarios import titulo
 #
 titulo(' Analisando e gerando Dicionários ')
 
-
+# Resumindo o exercício ex105:
 # ******************************************************************** #
 
 
@@ -33,21 +33,11 @@ def notas(*n, sit=False):
     :return: dicionário com as informações
     """
     informa = dict()
-    cont = tot = maior = menor = média = 0
-    for c in range(len(n)):
-        if c == 0:
-            maior = menor = n[c]
-        elif maior < n[c]:
-            maior = n[c]
-        elif menor < n[c]:
-            menor = n[c]
-        tot += n[c]
-        cont += 1
-        média = tot / cont
-    informa['total'] = cont
-    informa['maior'] = maior
-    informa['menor'] = menor
-    informa['média'] = float(f'{média:.2f}')
+    informa['total'] = len(n)
+    informa['maior'] = max(n)
+    informa['menor'] = min(n)
+    média = float(sum(n) / len(n))
+    informa['média'] = f'{média:.2f}'
     if sit:
         if média < 5:
             situação = 'RUÍM'
@@ -61,5 +51,8 @@ def notas(*n, sit=False):
 
 # Rotina principal
 help(notas)
+print('*'*75)
+resp = notas(5.5, 3.9, 2, 6.5)
+print(resp)
 resp = notas(5.5, 3.9, 2, 6.5, sit=True)
 print(resp)
