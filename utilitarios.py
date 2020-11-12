@@ -8,10 +8,10 @@ def lin1():
 
 def cor(tipo):
     """
-    Altera a cor do texto.
-    :param tipo: indica qual a cor desejada:
+    Altera a cor do texto:
     br = branca, vm = vermelho, vd = verde, am = amarelo, az = azul
     ma = magenta, ci = ciânico, cz = cinza, 0 = restaura cor padrão
+    :param tipo: indica qual a cor desejada:
     :return: retorna o código da cor escolhida
     função criada por Eduardo A. M. Pessanha
     """
@@ -46,3 +46,19 @@ def titulo(msg):
     print(f'{"*"}{texto:^69}{"*":>3}')
     print('*' * 48)
     print('\033[m')
+
+
+def leiaint(texto):
+    """
+    -> Le uma string da entrada e faz a validação para dados numéricos
+    :param texto: String a ser validada
+    :return: n
+    """
+    while True:
+        n = str(input(texto))
+        if n.isnumeric():
+            n = int(n)
+            break
+        else:
+            print(f'{cor("vm")}ERRO: Digite um número inteiro válido.{cor(0)}')
+    return n
