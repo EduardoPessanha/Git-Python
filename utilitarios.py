@@ -38,13 +38,17 @@ def cor(tipo):
 
 def titulo(msg):
     """
-    Exibe uma mensagem formatada na cor azul.
+    Exibe uma mensagem formatada.
     :param msg: texto a ser exibido
     """
-    print('\033[1;3;34m*' * 48)
+    # print('\033[1;3;34m*' * 48)
+    # print(f'{"*"}{"*":>47}')
     texto = f'\033[1;3;4;7;34m{msg}\033[m\033[1;3;34m'
-    print(f'{"*"}{texto:^69}{"*":>3}')
-    print('*' * 48)
+    a = len(msg) + 4
+    print('\033[1;3;34m*' * a)
+    print(f'{"*":<2}{texto:^{a}}{"*":>2}')
+    # print(f'{"*"}{"*":>47}')
+    print('*' * a)
     print('\033[m')
 
 
