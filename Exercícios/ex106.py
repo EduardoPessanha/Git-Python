@@ -20,7 +20,7 @@ def pyhelp():
         print(f'{texto:^{t}}')
         print(f"{'*' * t}")
         func = (str(input('\033[mFunção de Biblioteca -> ')))
-        if func == 'fim':
+        if func.upper() == 'FIM':
             break
         else:
             manual(func)
