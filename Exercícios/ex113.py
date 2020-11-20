@@ -1,5 +1,5 @@
 from utilitarios import titulo
-
+from utilidades.numero import leiaint, leiafloat
 # ************************ Desafio 113 ************************* #
 #                 Funções aprofundadas em Python                 #
 #  Reescreva a função leiaInt() que fizemos no desafio 104,      #
@@ -9,3 +9,7 @@ from utilitarios import titulo
 # ************************************************************** #
 titulo('Funções aprofundadas em Python')
 # ************************************************************** #
+
+nI = leiaint('Digite um número: ')
+nR = leiafloat('Digite um número Real: ')
+print(f'O número \"Inteiro\" digitado foi {nI} e o número \"Real\" foi {nR}')
