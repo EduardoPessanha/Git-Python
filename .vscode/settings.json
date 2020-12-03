@@ -1,7 +1,17 @@
 {
-    "python.languageServer": "Pylance"
-    "window.zoomLevel": 1.8,
-    "kite.enableOptionalCompletionsTriggers": false,
-    "kite.showWelcomeNotificationOnStartup": false
-  
+    "window.zoomLevel": 2,
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "code-runner.ignoreSelection": true,
+    "code-runner.runInTerminal": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.flake8Enabled": true,
+    // "python.pythonPath": "virtual/bin/python",
+    "code-runner.executorMap": {
+        "python": "virtual/bin/python3",
+    },
+    "[python]": {
+        "editor.formatOnSave": true,
+    }
+
 }
